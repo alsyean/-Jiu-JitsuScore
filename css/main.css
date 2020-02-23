@@ -1,0 +1,314 @@
+/* 가운데 영역 */
+.container{position: relative; width: 1280px; margin: 0 auto; background: rgba(0,0,0,0.0);}
+
+/* 로우영역 */
+.row{padding: 0 28px;}
+
+body{
+		font-family: 'NanumSquare', sans-serif;
+}
+
+/* 레이어아웃 */
+#wrap{width: 100%; overflow: hidden;}
+#wrap>div{float: left;}
+
+/* 인풋text */
+#FirstNameTag>input[type=text]{
+	width: 70%;
+  padding: 0 20px;
+  border:0;
+  box-sizing: border-box;
+	background: #bc997b;
+	color:#fff;
+	text-align: center;
+	font-size: 65px;
+}
+
+#SecondNameTag>input[type=text]{
+	width: 70%;
+  padding: 0 20px;
+  border:0;
+  box-sizing: border-box;
+	background: #876647;
+	color:#fff;
+	text-align: center;
+	font-size: 65px;
+}
+
+#FirstNameTag>input::placeholder, #SecondNameTag>input::placeholder{
+	color:#fff; opacity: 0.2;
+}
+
+#FirstNameTag>span, #SecondNameTag>span{
+	color: #fff;
+}
+
+#timerCell>input::placeholder{
+	color: #fff; opacity: 0.2;
+}
+
+#timerCell>input[type=text]{
+	width: 40%;
+  padding: 0 0;
+  border:0;
+  box-sizing: border-box;
+	background: #eec770;
+	color:#fff;
+	text-align: center;
+	font-size: 100px;
+}
+
+.time>span{
+	padding: 20px 0;
+	font-size: 98.5px;
+}
+
+.name>span{
+	padding: 11px 0;
+	font-size: 65px;
+}
+
+
+.score_penalty .exclude{color : #e27149;}
+.score_advantage .exclude{color: #493c91;}
+
+/* 로그 class */
+.log{}
+.log a{background: #bc997b; display: block; font-size: 18px; color:#fff; border-bottom: 1px solid #fff; border-radius: 15px 15px 0 0;}
+.log a:hover{color:#282828; font-weight: 900;}
+.log>p{font-size: 18px; padding: 10px 0; background: #bc997b;; border-bottom: 1px solid #000;}
+.log>p>i{margin-left: 30px;}
+.log>p:last-child{border-bottom: 0px; border-radius: 0 0 15px 15px;}
+
+/* 플레이어2 */
+
+
+/* content_left */
+.content_left{width: 30%; text-align: center; box-sizing: border-box; }
+.content_left .name{width: 90%; margin: 0 auto 15px auto; background: #b6997f; padding: 15px 0; font-weight: 900; font-size: 65px; border-radius: 0 0 15px 15px}
+.content_left .score{width: 90%; margin: 0 auto ; background: #f2f2f2; color:#000000; padding: 20px 0; font-weight: 900; font-size: 210px; border-radius: 15px}
+.content_left .score_number{width: 90%; overflow: hidden; margin: 15px auto 0 auto; }
+.content_left .score_number>div{width: 33.333%; display: block; float: left; box-sizing: border-box; font-weight: 900; font-size: 40px;}
+.content_left .score_number>div .btn_container{background: #f2f2f2; width: 82%; margin: 0 auto; display: block; color:#bc997b; padding: 25px 0; box-sizing: border-box; border-radius: 15px; font-weight: 900; font-size: 40px;}
+.content_left .firstPlayerBtnLog{background: #b6997f; border-radius: 15px; margin-top: 20px; display: inline-block;  width: 85%; padding: 23px 0; font-weight: 900; font-size: 48px; color: #fff; box-sizing: border-box;}
+
+/* content_center */
+.content_center{width: 40%; text-align: center;  box-sizing: border-box;}
+.content_center .time{padding:0 0; font-weight: 900; font-size: 100px;  background: #eec770; border-radius: 0 0 15px 15px; margin: 0 auto 10px auto;}
+.content_center .time>input{font-size: 100px; width: 80px; margin-bottom: 2px;}
+.time>span{line-height: 1.55;}
+
+.content_center .score_penalty{width: 100%; height: 15%; overflow: hidden; margin-bottom: 20px; position: relative;}
+.content_center .score_penalty>div{display: block; float: left; padding: 10px 0; box-sizing: border-box; font-weight: 900; font-size: 24px; background: #ffede7; margin-bottom: 5px;}
+.content_center .score_penalty .penalty_play1{width: 50%; border-radius: 15px 0 0 15px; font-size: 75px; margin-top: 10px;}
+.content_center .score_penalty .penalty{ z-index: 99; border-radius: 10px; width: 20%; height: 100%; background: #e27149; color:#fff; font-size: 100px; position: absolute; top: 0;  right: 0; bottom: 0;  left: 0; margin: auto;}
+.content_center .score_penalty .penalty_play2{ width: 50%; border-radius: 0 15px 15px 0; font-size: 75px; margin-top: 10px;}
+
+.content_center .score_advantage{width: 100%; height: 15%; overflow: hidden; margin-bottom: 15px; position: relative; }
+.content_center .score_advantage>div{display: block; float: left; padding: 10px 0; box-sizing: border-box; font-weight: 900; font-size: 24px; font-weight: 900; margin-bottom: 5px;}
+.content_center .score_advantage .advantage_play1{ width: 50%; margin-top: 10px;background: #f2efff; border-radius: 15px 0 0 15px; font-size: 75px;}
+.content_center .score_advantage .advantage_play2{ width: 50%; margin-top: 10px; background: #f2efff; border-radius: 0 15px 15px 0; font-size: 75px;}
+.content_center .score_advantage .advantage{display: inline-block; border-radius: 10px; width: 20%; height: 100%;background: #493c91; color:#fff; font-size: 100px; position: absolute; top: 0;  right: 0; bottom: 0;  left: 0; margin: auto;}
+ /*  margin-top: -1px; */
+.content_center .cansel{background: #b6997f; border-radius: 15px; color: #fff; display: block; padding: 20px 0; box-sizing: border-box; font-weight: 900; font-size: 52px; margin-top: 30px;}
+
+.center_btn{width: 100%; overflow:hidden; margin-top: 21px;}
+.center_btn>span{text-align: center; float: left;}
+.center_btn .start{width: 50%;  float: left; padding: 0 auto}
+.center_btn .end{ width: 50%;  float: right; padding: 0 auto}
+.btn_start_inner{ padding: 20px 0; border-radius: 15px; background: #eec770; color: #fff; display: block; font-weight: 900; font-size: 50px; box-sizing: border-box; margin: 0 10px 0 0}
+.btn_end_inner{ padding: 20px 0; border-radius: 15px; background: #eec770; color: #fff; display: block; font-weight: 900; font-size: 50px; box-sizing: border-box; margin: 0 0 0 10px}
+
+
+/* content_right */
+.content_right{width: 30%; text-align: center;  box-sizing: border-box;}
+.content_right .name{width: 90% ; margin: 0 auto 15px auto; ;background: #876647; padding: 15px 0; font-weight: 900; font-size: 65px; border-radius: 0 0 15px 15px}
+.content_right .score{width: 90%; margin: 0 auto ; background: #f2f2f2; color:#000000; padding: 20px 0; font-weight: 900; font-size: 210px; border-radius: 15px}
+.content_right .score_number{width: 90%; overflow: hidden; margin: 20px auto 0 auto;}
+.content_right .score_number>div{width: 33.33%; display: block; float: left; border-radius: 30px;}
+.content_right .score_number>div .btn_container{background: #f2f2f2 ; width: 82% ;display: block; border-radius:  15px; font-size: 40px; font-weight: 900; color: #876647; margin: 0 auto 15px auto; padding: 25px 0; box-sizing: border-box; font-size: 40px;}
+.content_right .secondPlayerBtnLog{display: inline-block;  width: 85%; padding: 23px 0; box-sizing: border-box; font-weight: 900; font-size: 48px; color: #fff; background: #876647; border-radius: 15px;}
+
+
+.minusBtn{color: #fff; margin: 0 auto;}
+
+.popup_panel {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+.popup_panel div.popup_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000000f5;
+	filter: alpha(opacity = 70);
+}
+
+.popup_panel div.log {
+	position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 450px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+/* 미디어 쿼리 */
+@media(max-width:1290px){
+}
+
+@media(max-width:1024px){
+
+}
+
+@media(max-width:960px){
+	.content_left .name{font-size: 22px; border-radius: 0 0 10px 10px;}
+	.content_left .score{font-size: 69px; padding: 30px 0; margin-bottom: 10px; border-radius: 10px; padding: 15px 0 ;}
+	.content_left .score_number{margin: 10px auto 0 auto; margin-top: 5px;}
+	.content_left .score_number>div .btn_container{padding: 10px 0;  font-size: 23px; border-radius: 10px;}
+	.content_left .firstPlayerBtnLog{padding: 17.5px; font-size: 17px; margin-top: 15px; border-radius: 10px;}
+
+	.content_center .time{padding: 15px 0; font-size: 34px; margin-bottom: 5px;}
+	.content_center .time>input{font-size: 34px; width: 80px; margin: 0 auto;}
+
+	.content_center .score_penalty{margin-top: 5px; margin-bottom: 5px; }
+	.content_center .score_penalty>div{padding: 5px 0;}
+	.content_center .score_penalty .penalty_play1{padding: 7px 0; margin-top: 5px ; font-size: 25px; border-radius: 10px;}
+	.content_center .score_penalty .penalty{ font-size: 32px; }
+	.content_center .score_penalty .penalty_play2{padding: 7px 0; margin-top: 5px;  font-size: 25px; border-radius: 10px;}
+
+
+	.content_center .score_advantage{margin-top: 5px; margin-bottom: 10px;}
+	.content_center .score_advantage>div{padding: 5px 0;}
+	.content_center .score_advantage .advantage_play1{padding: 7px 0; margin-top: 5px; font-size: 25px; border-radius: 10px;}
+	.content_center .score_advantage .advantage_play2{padding: 7px 0; margin-top: 5px; font-size: 25px; border-radius: 10px;}
+	.content_center .score_advantage .advantage{ font-size: 32px; }
+
+	.content_center .cansel{font-size: 24px; margin-top: 10px; padding: 9px; border-radius: 10px;}
+
+	.center_btn{width: 100%; overflow:hidden; margin-top: 15px;}
+	.btn_start_inner{padding: 12px 0;  font-size: 23px; border-radius: 10px; }
+	.btn_end_inner{padding: 12px 0; font-size: 23px; border-radius: 10px;}
+
+	.content_right .name{font-size: 22px; border-radius: 0 0 10px 10px;}
+	.content_right .score{font-size: 69px; padding: 30px 0; margin-bottom: 10px; border-radius: 10px; padding: 15px 0 ;}
+	.content_right .score_number{ margin: 5px auto 0 auto; border-radius: 10px;}
+	.content_right .score_number>div .btn_container{ padding: 10px 0; font-size: 23px; margin-bottom: 5px; border-radius: 10px;}
+	.content_right .secondPlayerBtnLog{padding: 17.5px; font-size: 17px; border-radius: 10px; margin-top: 10px;}
+
+
+	/* 인풋text */
+	#FirstNameTag>input[type=text]{
+		font-size: 22px;
+	}
+
+
+	#SecondNameTag>input[type=text]{
+		font-size: 22px;
+	}
+	#timerCell>input[type=text]{
+		font-size: 34.3px;
+	}
+
+	.time>span{
+		padding: 20px 0;
+		font-size: 33.5px;
+	}
+
+	.name>span{
+		padding: 12px 0;
+		font-size: 22px;
+	}
+
+
+}
+
+@media(max-width:600px){
+	.content_left .name{font-size: 18px; border-radius: 0 0 10px 10px; padding: 10px 0;}
+	.content_left .score{font-size: 60px; padding: 30px 0; margin-bottom: 10px; border-radius: 10px; padding: 15px 0 ;}
+	.content_left .score_number{margin: 10px auto 0 auto; margin-top: 5px;}
+	.content_left .score_number>div .btn_container{padding: 10px 0;  font-size: 19px; border-radius: 10px;}
+	.content_left .firstPlayerBtnLog{padding: 15px; font-size: 17px; margin-top: 10px; border-radius: 10px;}
+
+	.content_center .time{padding: 7px 0; font-size: 34px; margin-bottom: 5px;}
+	.content_center .time>input{font-size: 34px; width: 80px; margin: 0 auto;}
+
+	.content_center .score_penalty{margin-top: 5px; margin-bottom: 5px; }
+	.content_center .score_penalty>div{padding: 5px 0;}
+	.content_center .score_penalty .penalty_play1{padding: 7px 0; margin-top: 5px ; font-size: 20px; border-radius: 10px;}
+	.content_center .score_penalty .penalty{ font-size: 32px; }
+	.content_center .score_penalty .penalty_play2{padding: 7px 0; margin-top: 5px;  font-size: 20px; border-radius: 10px;}
+
+
+	.content_center .score_advantage{margin-top: 5px; margin-bottom: 10px;}
+	.content_center .score_advantage>div{padding: 5px 0;}
+	.content_center .score_advantage .advantage_play1{padding: 7px 0; margin-top: 5px; font-size: 20px; border-radius: 10px;}
+	.content_center .score_advantage .advantage_play2{padding: 7px 0; margin-top: 5px; font-size: 20px; border-radius: 10px;}
+	.content_center .score_advantage .advantage{ font-size: 32px; }
+
+	.content_center .cansel{font-size: 20px; margin-top: 10px; padding: 9px; border-radius: 10px;}
+
+	.center_btn{width: 100%; overflow:hidden; margin-top: 12px;}
+	.btn_start_inner{padding: 12px 0;  font-size: 19px; border-radius: 10px; }
+	.btn_end_inner{padding: 12px 0; font-size: 19px; border-radius: 10px;}
+
+	.content_right .name{font-size: 18px; border-radius: 0 0 10px 10px; padding: 10px 0;}
+	.content_right .score{font-size: 60px; padding: 30px 0; margin-bottom: 10px; border-radius: 10px; padding: 15px 0 ;}
+	.content_right .score_number{ margin: 5px auto 0 auto; border-radius: 10px;}
+	.content_right .score_number>div .btn_container{ padding: 10px 0; font-size: 19px; margin-bottom: 0; border-radius: 10px;}
+	.content_right .secondPlayerBtnLog{padding: 15px; font-size: 17px; border-radius: 10px; margin-top: 10px;}
+
+
+	/* 인풋text */
+	#FirstNameTag>input[type=text]{
+		font-size: 18px;
+	}
+
+
+	#SecondNameTag>input[type=text]{
+		font-size: 18px;
+	}
+	#timerCell>input[type=text]{
+		font-size: 28px;
+	}
+
+	.time>span{
+		padding: 20px 0;
+		font-size: 27.5px;
+	}
+
+	.name>span{
+		padding: 12px 0;
+		font-size: 18px;
+	}
+}
+
+
+@media(max-width:480px){
+
+}
+
+@media(max-width:320px){
+
+}
+
+
+
+
+
+/*  */

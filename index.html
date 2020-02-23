@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <title>스코어판</title>
+    <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- 웹 폰트 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <!-- <script  src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+    <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="js/reset.jqm.js"> </script>
+    <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <script src="js/get.js"> </script>
+    <script src="js/score.js"> </script>
+    <script src="js/timer.js"> </script>
+    <script src="js/popup.js"> </script>
+
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="content_left">
+        <div class="name" id="FirstNameTag">
+
+            <input class="data-role-none" type="text" id="FirstName" maxlength="8"  placeholder="PLAYER1" autofocus >
+
+        </div>
+        <div class="score">
+          <span id='firstPlayerTotalCell'>00</span>
+        </div>
+        <div class="score_number">
+
+          <div class="firstPlayer plusBtn number_4" data-num = "number_4" data-val="4" data-obj="totalAmt4">
+            <div class="btn_container">
+              4
+            </div>
+          </div>
+          <div class="firstPlayer plusBtn number_3" data-num = "number_3" data-val="3" data-obj="totalAmt3">
+            <div class="btn_container">
+              3
+            </div>
+          </div>
+          <div class="firstPlayer plusBtn number_2" data-num = "number_2" data-val="2" data-obj="totalAmt2">
+            <div class="btn_container">
+              2
+            </div>
+          </div>
+
+        </div>
+        <span class="firstPlayerBtnLog" data-name="Player1">LOG</span>
+        <div class="firstPlayerPopup popup_panel" style="overflow-y:scroll">
+          <div class="firstPlayerPopup popup_bg">
+            <div class="Player1 log" >
+
+              <a href="javascript:void(0)" id="btn_popup_close" class="firstPlayerPopupClose">닫기</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content_center">
+        <div class="time" id="timerCell">
+          <input class="data-role-none" type='text' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="setIntervalMinute"  placeholder="5분"></input>
+          <input class="data-role-none" type='text' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="setIntervalSecond"  placeholder="00초"></input>
+        </div>
+        <div class="score_penalty">
+
+
+            <div class="firstPlayer exclude penalty_play1" data-penadv = "penalty_play1" data-obj="totalAmtP" data-pa="penalty" data-val="1" id="totalAmtP">00</div>
+            <div class="penalty">P</div>
+            <div class="secondPlayer exclude penalty_play2" data-penadv = "penalty_play2" data-obj="totalAmtP" data-pa="penalty" data-val="1" id="totalAmtP">00</div>
+
+
+        </div>
+        <div class="score_advantage">
+          <div class="firstPlayer exclude advantage_play1" data-penadv ="advantage_play1" data-obj="totalAmtA" data-pa="advantage" data-val="1" id="totalAmtA">00</div>
+          <div class="advantage">A</div>
+          <div class="secondPlayer exclude advantage_play2" data-penadv ="advantage_play2" data-obj="totalAmtA" data-pa="advantage" data-val="1" id="totalAmtA">00</div>
+
+        </div>
+        <span id="cancle" class="cansel">CANCEL</span>
+        <span id="Reset" class="cansel">RESET</span>
+
+        <div class="center_btn">
+          <span id="start" class="start">
+            <div class="btn_start_inner">
+              START
+            </div></span>
+          <span onClick='timerPause();' id="pause" class="start" >
+             <div class="btn_start_inner">
+              PAUSE
+            </div>
+          </span>
+          <span id="End" class="end">
+            <div class="btn_end_inner">
+              END
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <div class="content_right">
+        <div class="name" id="SecondNameTag">
+
+
+          <input class="data-role-none" type="text" id="SecondName" maxlength="8"  placeholder="PLAYER2">
+
+        </div>
+        <div class="score">
+           <span id='secondPlayerTotalCell'>00</span>
+        </div>
+        <div class="score_number">
+          <div class="secondPlayer plusBtn number_4" data-num ="number_4" data-val="4" data-obj="totalAmt4">
+            <div class="btn_container">
+              4
+            </div>
+          </div>
+          <div class="secondPlayer plusBtn number_3" data-num ="number_3" data-val="3" data-obj="totalAmt3">
+            <div class="btn_container">
+              3
+            </div>
+          </div>
+
+          <div class="secondPlayer plusBtn number_2" data-num ="number_2" data-val="2" data-obj="totalAmt2">
+            <div class="btn_container">
+              2
+            </div>
+          </div>
+
+        </div>
+        <span class="secondPlayerBtnLog" data-name="Player2">LOG</span>
+        <div class="secondPlayerPopup popup_panel" style="overflow-y:scroll">
+          <div class="secondPlayerPopup popup_bg">
+            <div class="Player2 log">
+
+              <a href="javascript:void(0)" id="btn_popup_close" class="secondPlayerPopupClose" data-btn="secondPlayerPopup">닫기</a>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="firstPlayerGroup">
+      <span class="point firstPlayer" id="totalAmt4" >0</span>
+      <span class="point firstPlayer" id="totalAmt3" >0</span>
+      <span class="point firstPlayer" id="totalAmt2" >0</span>
+      <span class="point firstPlayer exclude" id="totalAmtP">0</span>
+      <span class="point firstPlayer exclude" id="totalAmtA">0</span>
+    </div>
+
+    <div class="secondPlayerGroup">
+      <span class="point secondPlayer" id="totalAmt4" >0</span>
+      <span class="point secondPlayer" id="totalAmt3" >0</span>
+      <span class="point secondPlayer" id="totalAmt2" >0</span>
+      <span class="point secondPlayer exclude" id="totalAmtP">0</span>
+      <span class="point secondPlayer exclude" id="totalAmtA">0</span>
+    </div>
+
+
+
+
+  </body>
+</html>

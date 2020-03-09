@@ -2,7 +2,7 @@
 주짓수 스코어판 
 ***
 
-* 개발 환경 : HTML, CSS, JavaScriptm JQuery
+* 개발 환경 : HTML, CSS, JavaScript, JQuery
 
 ***
 Web 화면

@@ -4,15 +4,6 @@
 
 * 개발 환경 : HTML, CSS, JavaScript, JQuery
 
-***
-Web 화면
-
-
-
-***
-Moblie 화면
-
-
 
 *** 
 

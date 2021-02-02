@@ -4,15 +4,6 @@
 
 * 개발 환경 : HTML, CSS, JavaScript, JQuery
 
-***
-Web 화면
-
-![web](https://alsyean.s3.ap-northeast-2.amazonaws.com/Jiu-JitsuScore/Jiu-JitsuScore+web.png)
-
-***
-Moblie 화면
-
-![Moblie](https://alsyean.s3.ap-northeast-2.amazonaws.com/Jiu-JitsuScore/Jiu-JitsuScore+Moblie.png)
 
 *** 
 
